@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:konstructapp/screens/home_screen.dart';
-import 'package:konstructapp/screens/new_event_screen.dart';
+import 'package:ugly/screens/home_screen.dart';
+import 'package:ugly/screens/new_event_screen.dart';
 
 import 'screens/landing_screen.dart';
 
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Tubo',
+      title: 'Palace',
       theme: ThemeData(
         // This is the theme of your application.
         //

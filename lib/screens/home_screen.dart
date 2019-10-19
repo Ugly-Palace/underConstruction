@@ -1,9 +1,9 @@
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 import 'package:flutter/material.dart';
-import 'package:konstructapp/screens/feeds_screen.dart';
-import 'package:konstructapp/screens/new_event_screen.dart';
-import 'package:konstructapp/screens/profile_screen.dart';
-import 'package:konstructapp/screens/search_event_screen.dart';
+import 'package:ugly/screens/feeds_screen.dart';
+import 'package:ugly/screens/new_event_screen.dart';
+import 'package:ugly/screens/profile_screen.dart';
+import 'package:ugly/screens/search_event_screen.dart';
 
 import 'notification_screen.dart';
 
@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
           onTabChangedListener: (position) {
             setState(() {
-              if (position == 5) {
+              if (position == 6) {
                 Navigator.pushNamed(context, NewEventScreen.routeName);
               } else
                 _page = position;

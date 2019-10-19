@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:konstructapp/shared/event_card.dart';
+import 'package:ugly/shared/event_card.dart';
 
 class FeedScreen extends StatefulWidget {
   @override

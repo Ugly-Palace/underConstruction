@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as prefix0;
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:konstructapp/screens/home_screen.dart';
-import 'package:konstructapp/style/theme.dart' as Theme;
-import 'package:konstructapp/utils/bubble_indication_painter.dart';
+import 'package:ugly/screens/home_screen.dart';
+import 'package:ugly/style/theme.dart' as Theme;
+import 'package:ugly/utils/bubble_indication_painter.dart';
 
 class LandingScreen extends StatefulWidget {
   LandingScreen({Key key}) : super(key: key);
