@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
           onTabChangedListener: (position) {
             setState(() {
-              if (position == 6) {
+              if (position == 5) {
                 Navigator.pushNamed(context, NewEventScreen.routeName);
               } else
                 _page = position;
