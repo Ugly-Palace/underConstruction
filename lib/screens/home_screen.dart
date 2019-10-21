@@ -40,6 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: FloatingActionButton(
         child: Icon(
           Icons.add,
+          color: Colors.white,
         ),
         onPressed: () {},
       ),

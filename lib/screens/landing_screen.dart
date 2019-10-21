@@ -74,7 +74,7 @@ class _LandingScreenState extends State<LandingScreen>
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Container(
-                  margin: prefix0.EdgeInsets.only(top: 75),
+                  margin: prefix0.EdgeInsets.only(top: 50),
 //                  child: Card(
 //                    color: Colors.white,
 //                    shape: RoundedRectangleBorder(
@@ -83,10 +83,10 @@ class _LandingScreenState extends State<LandingScreen>
                   child: prefix0.Container(
                     padding: prefix0.EdgeInsets.all(10),
                     child: new Image(
-                      width: ScreenUtil.instance.setWidth(400),
+                      width: ScreenUtil.instance.setWidth(500),
                       height: ScreenUtil.instance.setHeight(200),
                       fit: BoxFit.fill,
-                      image: new AssetImage('assets/images/logo3.png'),
+                      image: new AssetImage('assets/images/logo1.png'),
                     ),
                   ),
                 ),
@@ -237,7 +237,7 @@ class _LandingScreenState extends State<LandingScreen>
                 ),
                 child: Container(
                   width: width * 0.8,
-                  height: ScreenUtil.instance.setHeight(500),
+                  height: ScreenUtil.instance.setHeight(520),
                   child: Column(
                     children: <Widget>[
                       prefix0.Form(
@@ -250,19 +250,19 @@ class _LandingScreenState extends State<LandingScreen>
                             keyboardType: TextInputType.emailAddress,
                             style: TextStyle(
                                 fontFamily: "WorkSansSemiBold",
-                                fontSize: 16.0,
+                                fontSize: 15.0,
                                 color: Colors.black),
                             decoration: InputDecoration(
                               border: InputBorder.none,
                               icon: Icon(
                                 FontAwesomeIcons.envelope,
                                 color: Colors.black,
-                                size: 22.0,
+                                size: 20.0,
                               ),
                               hintText: "Email Address",
                               hintStyle: TextStyle(
                                   fontFamily: "WorkSansSemiBold",
-                                  fontSize: 17.0),
+                                  fontSize: 15.0),
                             ),
                           ),
                         ),
@@ -281,18 +281,18 @@ class _LandingScreenState extends State<LandingScreen>
                           obscureText: _obscureTextLogin,
                           style: TextStyle(
                               fontFamily: "WorkSansSemiBold",
-                              fontSize: 16.0,
+                              fontSize: 15.0,
                               color: Colors.black),
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             icon: Icon(
                               FontAwesomeIcons.lock,
-                              size: 22.0,
+                              size: 20.0,
                               color: Colors.black,
                             ),
                             hintText: "Password",
                             hintStyle: TextStyle(
-                                fontFamily: "WorkSansSemiBold", fontSize: 17.0),
+                                fontFamily: "WorkSansSemiBold", fontSize: 16.0),
                             suffixIcon: GestureDetector(
                               onTap: _toggleLogin,
                               child: Icon(
@@ -311,19 +311,19 @@ class _LandingScreenState extends State<LandingScreen>
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: height * 0.22),
+                margin: EdgeInsets.only(top: height * 0.25),
                 decoration: new BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(5.0)),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
                       color: Theme.Colors.loginGradientStart,
-                      offset: Offset(1.0, 6.0),
-                      blurRadius: 20.0,
+                      offset: Offset(1.0, 9.0),
+                      blurRadius: 10.0,
                     ),
                     BoxShadow(
                       color: Theme.Colors.loginGradientEnd,
                       offset: Offset(1.0, 6.0),
-                      blurRadius: 20.0,
+                      blurRadius: 10.0,
                     ),
                   ],
                   gradient: new LinearGradient(
@@ -348,7 +348,7 @@ class _LandingScreenState extends State<LandingScreen>
                         "LOGIN",
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 25.0,
+                            fontSize: 20.0,
                             fontFamily: "WorkSansBold"),
                       ),
                     ),
@@ -451,7 +451,7 @@ class _LandingScreenState extends State<LandingScreen>
                     ),
                     child: new Icon(
                       FontAwesomeIcons.google,
-                      color: Color(0xFF0084ff),
+                      color: Colors.red,
                     ),
                   ),
                 ),
@@ -465,7 +465,7 @@ class _LandingScreenState extends State<LandingScreen>
 
   Widget _buildSignUp(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 23.0),
+      padding: EdgeInsets.only(top: 15.0),
       child: Column(
         children: <Widget>[
           Stack(
@@ -480,7 +480,7 @@ class _LandingScreenState extends State<LandingScreen>
                 ),
                 child: Container(
                   width: 300.0,
-                  height: 360.0,
+                  height: 350.0,
                   child: Column(
                     children: <Widget>[
                       Padding(
@@ -493,7 +493,7 @@ class _LandingScreenState extends State<LandingScreen>
                           textCapitalization: TextCapitalization.words,
                           style: TextStyle(
                               fontFamily: "WorkSansSemiBold",
-                              fontSize: 16.0,
+                              fontSize: 15.0,
                               color: Colors.black),
                           decoration: InputDecoration(
                             border: InputBorder.none,
@@ -615,14 +615,14 @@ class _LandingScreenState extends State<LandingScreen>
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 340.0),
+                margin: EdgeInsets.only(top: 335.0),
                 decoration: new BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(5.0)),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
                       color: Theme.Colors.loginGradientStart,
-                      offset: Offset(1.0, 6.0),
-                      blurRadius: 20.0,
+                      offset: Offset(1.0, 10.0),
+                      blurRadius: 15.0,
                     ),
                     BoxShadow(
                       color: Theme.Colors.loginGradientEnd,

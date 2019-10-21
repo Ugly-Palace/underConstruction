@@ -47,13 +47,13 @@ class _MainScreenState extends State<MainScreen> {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.message,
+                Icons.textsms,
               ),
               title: Container(height: 0.0),
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.group,
+                Icons.people,
               ),
               title: Container(height: 0.0),
             ),
