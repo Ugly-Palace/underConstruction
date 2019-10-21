@@ -6,8 +6,8 @@ import 'package:flutter/material.dart' as Ma;
 class Colors {
   const Colors();
 
-  static const Color loginGradientStart = Ma.Colors.yellowAccent;
-  static const Color loginGradientEnd = Ma.Colors.red;
+  static const Color loginGradientStart = Ma.Colors.orangeAccent;
+  static const Color loginGradientEnd = Ma.Colors.deepOrange;
 
   static const primaryGradient = const LinearGradient(
     colors: const [loginGradientStart, loginGradientEnd],

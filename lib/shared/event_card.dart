@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:ugly/shared/host_label.dart';
+import 'package:palace/shared/host_label.dart';
 
 class EventCard extends StatelessWidget {
   @override

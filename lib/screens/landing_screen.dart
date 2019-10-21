@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as prefix0;
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:ugly/screens/home_screen.dart';
-import 'package:ugly/style/theme.dart' as Theme;
-import 'package:ugly/utils/bubble_indication_painter.dart';
+import 'package:palace/screens/main_screen.dart';
+import 'package:palace/style/theme.dart' as Theme;
+import 'package:palace/utils/bubble_indication_painter.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LandingScreen extends StatefulWidget {
   LandingScreen({Key key}) : super(key: key);
@@ -43,6 +44,8 @@ class _LandingScreenState extends State<LandingScreen>
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.instance = ScreenUtil.getInstance()..init(context);
+
     double _height = prefix0.MediaQuery.of(context).size.height;
     double _width = prefix0.MediaQuery.of(context).size.width;
     return new Scaffold(
@@ -50,6 +53,7 @@ class _LandingScreenState extends State<LandingScreen>
       body: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (overscroll) {
           overscroll.disallowGlow();
+          return true;
         },
         child: SingleChildScrollView(
           child: Container(
@@ -69,13 +73,23 @@ class _LandingScreenState extends State<LandingScreen>
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(top: 75.0),
-                  child: new Image(
-                    width: _width * 40 / 90,
-                    height: _height * 10 / 90,
-                    fit: BoxFit.fill,
-                    image: new AssetImage('assets/images/logo.png'),
+                Container(
+                  margin: prefix0.EdgeInsets.only(top: 75),
+                  child: Card(
+                    elevation: 10.0,
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: prefix0.Container(
+                      padding: prefix0.EdgeInsets.all(10),
+                      child: new Image(
+                        width: ScreenUtil.instance.setWidth(400),
+                        height: ScreenUtil.instance.setHeight(200),
+                        fit: BoxFit.fill,
+                        image: new AssetImage('assets/images/logo1.png'),
+                      ),
+                    ),
                   ),
                 ),
                 Padding(
@@ -176,7 +190,7 @@ class _LandingScreenState extends State<LandingScreen>
                 highlightColor: Colors.transparent,
                 onPressed: _onSignInButtonPress,
                 child: Text(
-                  "LogIN",
+                  "Existing",
                   style: TextStyle(
                       color: left,
                       fontSize: 16.0,
@@ -191,7 +205,7 @@ class _LandingScreenState extends State<LandingScreen>
                 highlightColor: Colors.transparent,
                 onPressed: _onSignUpButtonPress,
                 child: Text(
-                  "SignUP",
+                  "New",
                   style: TextStyle(
                       color: right,
                       fontSize: 16.0,
@@ -224,13 +238,13 @@ class _LandingScreenState extends State<LandingScreen>
                 ),
                 child: Container(
                   width: width * 0.8,
-                  height: height * 0.28,
+                  height: ScreenUtil.instance.setHeight(500),
                   child: Column(
                     children: <Widget>[
                       prefix0.Form(
                         child: Padding(
                           padding: EdgeInsets.only(
-                              top: 20.0, bottom: 10.0, left: 25.0, right: 25.0),
+                              top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
                           child: prefix0.TextFormField(
                             focusNode: myFocusNodeEmailLogin,
                             controller: loginEmailController,
@@ -339,8 +353,9 @@ class _LandingScreenState extends State<LandingScreen>
                             fontFamily: "WorkSansBold"),
                       ),
                     ),
-                    onPressed: () => prefix0.Navigator.of(context)
-                        .pushNamed(HomeScreen.routeName)),
+                    onPressed: () {
+                      prefix0.Navigator.pushNamed(context, MainScreen.routName);
+                    }),
               ),
             ],
           ),
@@ -437,7 +452,7 @@ class _LandingScreenState extends State<LandingScreen>
                     ),
                     child: new Icon(
                       FontAwesomeIcons.google,
-                      color: Colors.red,
+                      color: Color(0xFF0084ff),
                     ),
                   ),
                 ),
