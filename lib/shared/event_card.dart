@@ -25,7 +25,7 @@ class EventCard extends StatelessWidget {
                     fit: BoxFit.cover,
                     alignment: Alignment.center,
                     image: AssetImage(
-                      'assets/images/construction.jpg',
+                      'assets/images/cm3.jpeg',
                     ),
                   ),
                   borderRadius: BorderRadius.all(
