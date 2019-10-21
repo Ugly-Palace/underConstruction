@@ -75,23 +75,22 @@ class _LandingScreenState extends State<LandingScreen>
               children: <Widget>[
                 Container(
                   margin: prefix0.EdgeInsets.only(top: 75),
-                  child: Card(
-                    elevation: 10.0,
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: prefix0.Container(
-                      padding: prefix0.EdgeInsets.all(10),
-                      child: new Image(
-                        width: ScreenUtil.instance.setWidth(400),
-                        height: ScreenUtil.instance.setHeight(200),
-                        fit: BoxFit.fill,
-                        image: new AssetImage('assets/images/logo1.png'),
-                      ),
+//                  child: Card(
+//                    color: Colors.white,
+//                    shape: RoundedRectangleBorder(
+//                      borderRadius: BorderRadius.circular(8),
+//                    ),
+                  child: prefix0.Container(
+                    padding: prefix0.EdgeInsets.all(10),
+                    child: new Image(
+                      width: ScreenUtil.instance.setWidth(400),
+                      height: ScreenUtil.instance.setHeight(200),
+                      fit: BoxFit.fill,
+                      image: new AssetImage('assets/images/logo3.png'),
                     ),
                   ),
                 ),
+//                ),
                 Padding(
                   padding: EdgeInsets.only(top: _height * 2 / 100),
                   child: _buildMenuBar(context),
